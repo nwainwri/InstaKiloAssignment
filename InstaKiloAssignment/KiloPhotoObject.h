@@ -1,5 +1,5 @@
 //
-//  PhotoAlbumObject.h
+//  KiloPhotoObject.h
 //  InstaKiloAssignment
 //
 //  Created by Nathan Wainwright on 2018-08-15.
@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface PhotoAlbumObject : NSObject
+@interface KiloPhotoObject : NSObject
+
+@property (nonatomic, weak) NSString *photo;
+
+- (instancetype)initWithPhoto:(NSString *)photo;
+
 
 @end

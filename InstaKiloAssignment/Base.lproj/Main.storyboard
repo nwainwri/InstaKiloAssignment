@@ -28,14 +28,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoViewCell" id="efj-38-jTs">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoViewCell" id="efj-38-jTs" customClass="PhotoCell">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MHq-cY-fQZ">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MHq-cY-fQZ" customClass="Photo">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                 </imageView>
                                             </subviews>
@@ -46,8 +46,16 @@
                                             <constraint firstItem="MHq-cY-fQZ" firstAttribute="top" secondItem="efj-38-jTs" secondAttribute="top" id="ZIW-4C-09I"/>
                                             <constraint firstItem="MHq-cY-fQZ" firstAttribute="leading" secondItem="efj-38-jTs" secondAttribute="leading" id="dNW-dn-GuN"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="photoImage" destination="MHq-cY-fQZ" id="ecI-Pk-UhK"/>
+                                            <outlet property="photoUIImageSpot" destination="MHq-cY-fQZ" id="i8b-Bs-qiX"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="pgM-vz-kov"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="n5C-za-tAc"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,6 +67,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="KiloPhotoAlbumViewPort" destination="nID-xH-xBr" id="lTi-3d-BkF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
