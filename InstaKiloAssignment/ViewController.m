@@ -46,18 +46,20 @@
 // MARK: init photo album array
 
 - (void) turnOnPhotoAlbum{
-    KiloPhotoObject *firstPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"oceanbeach"];
-    KiloPhotoObject *secondPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"oceancliff"];
-    KiloPhotoObject *thirdPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"oceanfish"];
-    KiloPhotoObject *fourthPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"oceanhouse"];
-    KiloPhotoObject *fifthPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"oceanmoon"];
-    KiloPhotoObject *sixthPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"oceanrandom"];
-    KiloPhotoObject *seventhPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"oceansunset"];
-    KiloPhotoObject *eighthPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"sunsetocean"];
-    KiloPhotoObject *ninthPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"waterfall"];
-    KiloPhotoObject *tenthPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"waterfallforest"];
     
-    self.photoAlbum = @[firstPhoto, secondPhoto, thirdPhoto, fourthPhoto, fifthPhoto, sixthPhoto, seventhPhoto, eighthPhoto, ninthPhoto, tenthPhoto];
+    KiloPhotoObject *firstPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"oceanbeach" andCategory:@"first"];
+    KiloPhotoObject *secondPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"oceancliff" andCategory:@"second"];
+    KiloPhotoObject *thirdPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"oceanfish" andCategory:@"second"];
+    KiloPhotoObject *fourthPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"oceanhouse" andCategory:@"first"];
+    KiloPhotoObject *fifthPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"oceanmoon" andCategory:@"second"];
+    KiloPhotoObject *sixthPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"oceanrandom" andCategory:@"first"];
+    KiloPhotoObject *seventhPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"oceansunset" andCategory:@"second"];
+    KiloPhotoObject *eighthPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"sunsetocean" andCategory:@"first"];
+    KiloPhotoObject *ninthPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"waterfall" andCategory:@"second"];
+    KiloPhotoObject *tenthPhoto = [[KiloPhotoObject alloc] initWithPhoto:@"waterfallforest" andCategory:@"first"];
+
+    
+    self.photoAlbum = @[firstPhoto, secondPhoto, thirdPhoto, fourthPhoto, fifthPhoto, sixthPhoto, seventhPhoto, eighthPhoto, ninthPhoto, tenthPhoto, firstPhoto, secondPhoto, thirdPhoto, fourthPhoto, fifthPhoto, sixthPhoto, seventhPhoto, eighthPhoto, ninthPhoto, tenthPhoto, firstPhoto, secondPhoto, thirdPhoto, fourthPhoto, fifthPhoto, sixthPhoto, seventhPhoto, eighthPhoto, ninthPhoto, tenthPhoto];
 }
 
 // MARK: get count for items/cells ; and populate items/cells here

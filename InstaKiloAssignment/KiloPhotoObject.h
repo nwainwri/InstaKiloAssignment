@@ -13,7 +13,10 @@
 
 @property (nonatomic, weak) NSString *photo;
 
-- (instancetype)initWithPhoto:(NSString *)photo;
+@property (nonatomic, weak) NSString *category;
+
+- (instancetype)initWithPhoto:(NSString *)photo andCategory:(NSString *)category;
+
 
 
 @end
