@@ -14,6 +14,7 @@
 		F1FF6F862124C06900DDCD65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1FF6F842124C06900DDCD65 /* LaunchScreen.storyboard */; };
 		F1FF6F892124C06A00DDCD65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FF6F882124C06A00DDCD65 /* main.m */; };
 		F1FF6F932124C06A00DDCD65 /* InstaKiloAssignmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FF6F922124C06A00DDCD65 /* InstaKiloAssignmentTests.m */; };
+		F1FF6FA22124C27B00DDCD65 /* PhotoAlbumObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FF6FA12124C27B00DDCD65 /* PhotoAlbumObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		F1FF6F8E2124C06A00DDCD65 /* InstaKiloAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaKiloAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FF6F922124C06A00DDCD65 /* InstaKiloAssignmentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstaKiloAssignmentTests.m; sourceTree = "<group>"; };
 		F1FF6F942124C06A00DDCD65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1FF6FA02124C27B00DDCD65 /* PhotoAlbumObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoAlbumObject.h; sourceTree = "<group>"; };
+		F1FF6FA12124C27B00DDCD65 /* PhotoAlbumObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoAlbumObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				F1FF6F7A2124C06700DDCD65 /* AppDelegate.m */,
 				F1FF6F7C2124C06700DDCD65 /* ViewController.h */,
 				F1FF6F7D2124C06700DDCD65 /* ViewController.m */,
+				F1FF6FA02124C27B00DDCD65 /* PhotoAlbumObject.h */,
+				F1FF6FA12124C27B00DDCD65 /* PhotoAlbumObject.m */,
 				F1FF6F7F2124C06700DDCD65 /* Main.storyboard */,
 				F1FF6F822124C06900DDCD65 /* Assets.xcassets */,
 				F1FF6F842124C06900DDCD65 /* LaunchScreen.storyboard */,
@@ -206,6 +211,7 @@
 				F1FF6F7E2124C06700DDCD65 /* ViewController.m in Sources */,
 				F1FF6F892124C06A00DDCD65 /* main.m in Sources */,
 				F1FF6F7B2124C06700DDCD65 /* AppDelegate.m in Sources */,
+				F1FF6FA22124C27B00DDCD65 /* PhotoAlbumObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
