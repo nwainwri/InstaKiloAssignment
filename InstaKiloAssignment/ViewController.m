@@ -17,7 +17,7 @@
 @property NSArray<KiloPhotoObject *> *photoAlbum;
 
 
-@property (weak, nonatomic) IBOutlet UICollectionView *KiloPhotoAlbumViewPort;
+//@property (weak, nonatomic) IBOutlet UICollectionView *KiloPhotoAlbumViewPort;
 
 
 
@@ -71,7 +71,7 @@
     
     KiloPhotoObject *currentPhoto = self.photoAlbum[indexPath.item];
     
-    cell.photoImage.image = [UIImage imageNamed:currentPhoto.photo];
+    cell.imageKiloPhoto.image = [UIImage imageNamed:currentPhoto.photo];
     
     return cell;
 }

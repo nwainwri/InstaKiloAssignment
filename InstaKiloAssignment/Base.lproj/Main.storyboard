@@ -35,20 +35,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MHq-cY-fQZ" customClass="Photo">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="23C-iq-IxF">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="MHq-cY-fQZ" secondAttribute="trailing" id="P7b-CU-hqu"/>
-                                            <constraint firstAttribute="bottom" secondItem="MHq-cY-fQZ" secondAttribute="bottom" id="YeJ-j6-78B"/>
-                                            <constraint firstItem="MHq-cY-fQZ" firstAttribute="top" secondItem="efj-38-jTs" secondAttribute="top" id="ZIW-4C-09I"/>
-                                            <constraint firstItem="MHq-cY-fQZ" firstAttribute="leading" secondItem="efj-38-jTs" secondAttribute="leading" id="dNW-dn-GuN"/>
+                                            <constraint firstAttribute="trailing" secondItem="23C-iq-IxF" secondAttribute="trailing" id="0a6-G8-zOg"/>
+                                            <constraint firstItem="23C-iq-IxF" firstAttribute="top" secondItem="efj-38-jTs" secondAttribute="top" id="3K6-qh-3WF"/>
+                                            <constraint firstItem="23C-iq-IxF" firstAttribute="leading" secondItem="efj-38-jTs" secondAttribute="leading" id="bCW-jn-D6R"/>
+                                            <constraint firstAttribute="bottom" secondItem="23C-iq-IxF" secondAttribute="bottom" id="pr5-b2-MOc"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="photoImage" destination="MHq-cY-fQZ" id="ecI-Pk-UhK"/>
-                                            <outlet property="photoUIImageSpot" destination="MHq-cY-fQZ" id="i8b-Bs-qiX"/>
+                                            <outlet property="imageKiloPhoto" destination="23C-iq-IxF" id="OZc-7e-wMD"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -67,13 +66,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="KiloPhotoAlbumViewPort" destination="nID-xH-xBr" id="lTi-3d-BkF"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
+            <point key="canvasLocation" x="644" y="-129.98500749625188"/>
         </scene>
     </scenes>
 </document>

@@ -10,7 +10,10 @@
 
 @interface PhotoCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *photoImage;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageKiloPhoto;
+
+
 
 
 // MARK: this is only for UIVollectionCell control.../modelling... NOT for photo objec specifically.
