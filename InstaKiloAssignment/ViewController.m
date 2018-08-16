@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "KiloPhotoObject.h"
 #import "PhotoCell.h"
+#import "KiloPhotoSectionHeaderCollectionReusableView.h"
 
 
 
@@ -68,10 +69,6 @@
     return self.photoAlbum.count;
 }
 
--(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 2;
-    
-}
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     PhotoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoViewCell" forIndexPath:indexPath];
@@ -82,6 +79,31 @@
     
     return cell;
 }
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 2;
+}
+
+//- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+//
+//
+//
+//}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionReusableView *reusableview = nil;
+    
+    if (kind == UICollectionElementKindSectionHeader) {
+        
+        KiloPhotoSectionHeaderCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CollectionViewSectionHeader" forIndexPath:indexPath];
+        
+        headerView.sectionHeaderLabel.text = @"DUMMY HEADER";
+        reusableview = headerView;
+    }
+    return reusableview;
+}
+
 
 
 

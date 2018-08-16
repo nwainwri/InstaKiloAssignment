@@ -16,6 +16,7 @@
 		F1FF6F932124C06A00DDCD65 /* InstaKiloAssignmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FF6F922124C06A00DDCD65 /* InstaKiloAssignmentTests.m */; };
 		F1FF6FAB2124C91400DDCD65 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FF6FAA2124C91400DDCD65 /* PhotoCell.m */; };
 		F1FF6FAE2124CC3C00DDCD65 /* KiloPhotoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FF6FAD2124CC3C00DDCD65 /* KiloPhotoObject.m */; };
+		F1FF6FB12124F92500DDCD65 /* KiloPhotoSectionHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1FF6FB02124F92500DDCD65 /* KiloPhotoSectionHeaderCollectionReusableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		F1FF6FAA2124C91400DDCD65 /* PhotoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
 		F1FF6FAC2124CC3C00DDCD65 /* KiloPhotoObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KiloPhotoObject.h; sourceTree = "<group>"; };
 		F1FF6FAD2124CC3C00DDCD65 /* KiloPhotoObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KiloPhotoObject.m; sourceTree = "<group>"; };
+		F1FF6FAF2124F92500DDCD65 /* KiloPhotoSectionHeaderCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KiloPhotoSectionHeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		F1FF6FB02124F92500DDCD65 /* KiloPhotoSectionHeaderCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KiloPhotoSectionHeaderCollectionReusableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				F1FF6FA92124C91400DDCD65 /* PhotoCell.h */,
 				F1FF6FAA2124C91400DDCD65 /* PhotoCell.m */,
 				F1FF6F7F2124C06700DDCD65 /* Main.storyboard */,
+				F1FF6FAF2124F92500DDCD65 /* KiloPhotoSectionHeaderCollectionReusableView.h */,
+				F1FF6FB02124F92500DDCD65 /* KiloPhotoSectionHeaderCollectionReusableView.m */,
 				F1FF6F822124C06900DDCD65 /* Assets.xcassets */,
 				F1FF6F842124C06900DDCD65 /* LaunchScreen.storyboard */,
 				F1FF6F872124C06A00DDCD65 /* Info.plist */,
@@ -215,6 +220,7 @@
 			files = (
 				F1FF6FAB2124C91400DDCD65 /* PhotoCell.m in Sources */,
 				F1FF6F7E2124C06700DDCD65 /* ViewController.m in Sources */,
+				F1FF6FB12124F92500DDCD65 /* KiloPhotoSectionHeaderCollectionReusableView.m in Sources */,
 				F1FF6F892124C06A00DDCD65 /* main.m in Sources */,
 				F1FF6F7B2124C06700DDCD65 /* AppDelegate.m in Sources */,
 				F1FF6FAE2124CC3C00DDCD65 /* KiloPhotoObject.m in Sources */,

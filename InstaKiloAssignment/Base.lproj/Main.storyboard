@@ -51,9 +51,26 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Uar-HM-kvi">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CollectionViewSectionHeader" id="Uar-HM-kvi" customClass="KiloPhotoSectionHeaderCollectionReusableView">
                                     <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1d-cs-pQh" userLabel="SectionHeaderLabel">
+                                            <rect key="frame" x="8" y="15" width="162" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="F1d-cs-pQh" firstAttribute="top" secondItem="Uar-HM-kvi" secondAttribute="top" constant="15" id="1rh-B6-4xH"/>
+                                        <constraint firstAttribute="bottom" secondItem="F1d-cs-pQh" secondAttribute="bottom" constant="14" id="5t9-hZ-q82"/>
+                                        <constraint firstAttribute="trailing" secondItem="F1d-cs-pQh" secondAttribute="trailing" constant="173" id="Hpt-Dy-awv"/>
+                                        <constraint firstItem="F1d-cs-pQh" firstAttribute="leading" secondItem="Uar-HM-kvi" secondAttribute="leading" constant="8" id="V21-YO-Kze"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="sectionHeaderLabel" destination="F1d-cs-pQh" id="Cdg-XA-XaN"/>
+                                    </connections>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="pgM-vz-kov"/>
