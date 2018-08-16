@@ -11,12 +11,14 @@
 @implementation KiloPhotoObject
 
 
-- (instancetype)initWithPhoto:(NSString *)photo andCategory:(NSString *)category
+- (instancetype)initWithPhoto:(NSString *)photo andCategory:(NSString *)category andLocation:(NSString *)location
+
 {
     self = [super init];
     if (self) {
         _photo = photo;
         _category = category;
+        _location = location;
     }
     return self;
 }

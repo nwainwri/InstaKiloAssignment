@@ -15,7 +15,10 @@
 
 @property (nonatomic, weak) NSString *category;
 
-- (instancetype)initWithPhoto:(NSString *)photo andCategory:(NSString *)category;
+@property (nonatomic, weak) NSString *location;
+
+
+- (instancetype)initWithPhoto:(NSString *)photo andCategory:(NSString *)category andLocation:(NSString *)location;
 
 
 
