@@ -44,15 +44,6 @@
     
     
     //    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.KiloPhotoAlbumViewPort;
-    
-    
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 // MARK: init photo album array
@@ -80,18 +71,56 @@
 
 // MARK: get count for items/cells ; and populate items/cells here
 
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 2;
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if (section == 0) {
-        
         return self.firstPhotoAlbum.count;
-    }
-    
-    
-    else {
+    } else {
         return self.secondPhotoAlbum.count;
     }
+}
+
+
+
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    PhotoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoViewCell" forIndexPath:indexPath];
     
-    
+    if (indexPath.section == 0) {
+        KiloPhotoObject *currentPhoto = self.firstPhotoAlbum[indexPath.item];
+        cell.imageKiloPhoto.image = [UIImage imageNamed:currentPhoto.photo];
+        return cell;
+    } else {
+        KiloPhotoObject *currentPhoto = self.secondPhotoAlbum[indexPath.item];
+        cell.imageKiloPhoto.image = [UIImage imageNamed:currentPhoto.photo];
+        return cell;
+    }
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    if (kind == UICollectionElementKindSectionHeader) {
+        KiloPhotoSectionHeaderCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CollectionViewSectionHeader" forIndexPath:indexPath];
+        if (indexPath.section == 0) {
+            headerView.sectionHeaderLabel.text = self.sectionOneHeader;
+        } else {
+            headerView.sectionHeaderLabel.text = self.sectionTwoHeader;
+        }
+        return headerView;
+    }
+    return nil;
+}
+
+
+- (IBAction)organizePhotos:(UISegmentedControl *)sender {
+    if (sender.selectedSegmentIndex == 0) {
+        [self sortPhotoCategory];
+    } else {
+        [self sortPhotoLocation];
+    }
 }
 
 - (void) sortPhotoCategory{
@@ -111,10 +140,12 @@
         }
     }
     
-    self.firstPhotoAlbum = categoryOneArray;
     self.sectionOneHeader = @"First Section";
-    self.secondPhotoAlbum = categoryTwoArray;
     self.sectionTwoHeader = @"Second Section";
+    
+    self.firstPhotoAlbum = categoryOneArray;
+    self.secondPhotoAlbum = categoryTwoArray;
+    
     [self.collectionView reloadData];
     
 }
@@ -135,68 +166,13 @@
         }
     }
     
-    self.firstPhotoAlbum = categoryOneArray;
     self.sectionOneHeader = @"Ocean Location";
-    self.secondPhotoAlbum = categoryTwoArray;
     self.sectionTwoHeader = @"Lake Location";
+    
+    self.firstPhotoAlbum = categoryOneArray;
+    self.secondPhotoAlbum = categoryTwoArray;
     
     [self.collectionView reloadData];
     
 }
-
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    PhotoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoViewCell" forIndexPath:indexPath];
-    
-    if (indexPath.section == 0) {
-        KiloPhotoObject *currentPhoto = self.firstPhotoAlbum[indexPath.item];
-        cell.imageKiloPhoto.image = [UIImage imageNamed:currentPhoto.photo];
-        return cell;
-    } else {
-        KiloPhotoObject *currentPhoto = self.secondPhotoAlbum[indexPath.item];
-        cell.imageKiloPhoto.image = [UIImage imageNamed:currentPhoto.photo];
-        return cell;
-    }
-}
-
--(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 2;
-}
-
-
-- (IBAction)organizePhotos:(UISegmentedControl *)sender {
-    if (sender.selectedSegmentIndex == 0) {
-        [self sortPhotoCategory];
-    } else {
-        [self sortPhotoLocation];
-    }
-}
-
-
-
-
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
-{
-    UICollectionReusableView *reusableview = nil;
-    
-    if (kind == UICollectionElementKindSectionHeader) {
-        
-        KiloPhotoSectionHeaderCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CollectionViewSectionHeader" forIndexPath:indexPath];
-        
-        if (indexPath.section == 0) {
-            headerView.sectionHeaderLabel.text = self.sectionOneHeader;
-            reusableview = headerView;
-        } else {
-            headerView.sectionHeaderLabel.text = self.sectionTwoHeader;
-            reusableview = headerView;
-        }
-        
-        
-    }
-    return reusableview;
-}
-
-
-
-
 @end
